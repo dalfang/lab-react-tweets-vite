@@ -40,7 +40,12 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {/* passes the first tweet object from tweetsArray as a prop named tweet to the Tweet component*/}
+      {/* then update Tweet.jsx to use the prop data*/}
+
+      {tweetsArray.map((tweet, index) => (
+        <Tweet key={index} tweet={tweet} />
+      ))}  
     </div>
   );
 }
